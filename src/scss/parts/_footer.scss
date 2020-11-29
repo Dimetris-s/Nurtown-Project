@@ -1,0 +1,176 @@
+.footer {
+    color: #fff;
+    background-color: #2C2C2C;
+
+    &__container {
+        padding-top: 60px;
+        padding-bottom: 55px;
+        display: grid;
+        grid-template-columns: 145px 145px 285px 200px;
+        justify-content: space-between;
+        min-height: 230px;
+    }
+
+    &__logo {
+        max-width: 145px;
+        max-height: 95px;
+    }
+
+    &__info {
+        @include flexible(space-between, column, flex-start);
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__menu {
+        @include flexible(space-between, column, flex-start);
+        min-height: 175px;
+
+        .menu__item {
+            position: relative;
+
+            .menu__link {
+                color: #fff;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0.03em;
+            }
+
+            &::after {
+                content: '';
+                width: 0%;
+                height: 1px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: width 0.3s ease;
+            }
+
+            &:not(.active):hover::after {
+                width: 100%;
+            }
+
+            &.active:hover .menu__link {
+                cursor: default;
+            }
+
+            &.active::before {
+                content: '';
+                position: absolute;
+                width: 7px;
+                left: -13px;
+                top: 38%;
+                height: 7px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.432);
+            }
+        }
+    }
+
+    &__contacts {
+        @include flexible(space-between, column, flex-start);
+
+        .contacts__list {
+            @include flexible(space-between, column, flex-start);
+            min-height: 175px;
+            list-style-type: none;
+            position: relative;
+        }
+
+        .contacts__item {
+            padding-left: 25px;
+        }
+
+        .contacts__link {
+            color: #fff;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__adress {
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../img/icons/adress.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 11px;
+            height: 17px;
+            left: 0;
+        }
+    }
+
+    &__tel {
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../img/icons/tel.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 18px;
+            height: 16px;
+            left: 0;
+        }
+    }
+
+    &__mail {
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../img/icons/mail.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 20px;
+            height: 17px;
+            left: 0;
+        }
+    }
+
+    &__socials-wrapper {
+        @include flexible(space-between, row, center);
+    }
+
+    &__socials-link {
+        display: block;
+    }
+
+    &__copyright {
+        @include flexible(center);
+        padding-top: 25px;
+        padding-bottom: 37px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 1px;
+            width: 100%;
+            background-color: #fff;
+            opacity: 0.1;
+        }
+    }
+
+    &__copyright-text {
+        color: rgba(200, 200, 200, .5);
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 22px;
+
+
+    }
+}
