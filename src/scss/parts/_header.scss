@@ -1,17 +1,18 @@
 .header {
-
+    margin-bottom: 65px;
+    flex-grow: 1;
     &__container {
         margin-top: 30px;
         margin-bottom: 32px;
         @include flexible(flex-start);
     }
-    flex-grow: 1;
 }
 
 .logo {
     max-height: 45px;
-    max-width: 70px;
-    margin-right: 330px;
+    max-width: 100px;
+    margin-right: 300px;
+    width: 100%;
 
     &__link {
         display: block;
@@ -38,7 +39,7 @@
                 content: '';
                 width: 0%;
                 height: 1px;
-                background-color: #333;
+                background-color: $accent-black;
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -55,14 +56,14 @@
                 position: absolute;
                 width: 100%;
                 height: 1px;
-                background-color: #333;
+                background-color: $accent-black;
             }
             &.active::after {
                 content: '';
                 position: absolute;
                 width: 100%;
                 height: 1px;
-                background-color: #333;
+                background-color: $accent-black;
                 bottom: 0;
                 left: 0;
             }
@@ -74,7 +75,7 @@
             font-size: 12px;
             line-height: 12px;
             letter-spacing: 0.2em;
-            color: #333;
+            color: $accent-black;
             text-transform: uppercase;
         }
     }

@@ -6,7 +6,35 @@
     @@include('components/_header.html', {
         'projects': 'active'
     })
-    
+
+    <section class="heading-section">
+        <div class="container heading-section__container">
+            @@include('components/_title.html', {
+                'firstword': 'Наши',
+                'secondword': 'Проекты'
+            })
+        </div>
+    </section>
+    <main class="main">
+        <div class="container main__container">
+            @@include('components/_card.html', {
+                'title': 'Общеобразовательная школа',
+                'src': 'img/school.jpg',
+                'src-second': 'img/parking.jpg',
+                'alt': 'picture'
+            })
+            @@include('components/_card.html', {
+                'title': 'Паркинг на 500 автомобилей',
+                'src': 'img/parking.jpg',
+                'alt': 'picture'
+            })
+            @@include('components/_card.html', {
+                'title': 'Проект интерьера офиса',
+                'src': 'img/office.jpg',
+                'alt': 'picture'
+            })
+        </div>
+    </main>
     @@include('components/_footer.html', {
         'projects': 'active'
     })

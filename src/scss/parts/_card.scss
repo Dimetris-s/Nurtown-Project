@@ -1,0 +1,56 @@
+.card {
+    @include flexible(space-between, row, space-between);
+    width: 100%;
+    padding-right: 30px;
+    margin-bottom: 60px;
+    background-color: #FBFBFB;
+
+    &--extended {
+        hidden {
+            display: block;
+        }
+    }
+
+    &__picture {
+        position: relative;
+        width: 670px;
+        margin-right: 30px;
+    }
+
+    &__image {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        @include flexible(space-between, column, flex-start);
+        width: 40%;
+        padding: 30px 0;
+    }
+
+    &__title {
+        color: #BDBDBD;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    &__link {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $accent-black;
+        text-decoration: none;
+    }
+}

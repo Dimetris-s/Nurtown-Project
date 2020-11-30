@@ -1,8 +1,13 @@
 @import url('normalize.css');
+@import 'parts/vars';
 @import 'parts/mixin';
 @import 'parts/fonts';
 @import 'parts/basic';
+@import 'parts/buttons';
 @import 'parts/menu';
 @import 'parts/header';
 @import 'parts/footer';
 @import 'parts/contacts';
+@import 'parts/card';
+@import 'parts/title';
+@import 'parts/heading-section'

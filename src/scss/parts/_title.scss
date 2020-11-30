@@ -1,0 +1,18 @@
+.title {
+    @include flexible(center, column, flex-start);
+
+    &__words {
+        text-transform: uppercase;
+        font-size: 64px;
+        line-height: 64px;
+        display: inline-block;
+        &:first-child {
+            font-weight: 300;
+            color: #BDBDBD;
+        }
+        &:last-child {
+            font-weight: bold;
+            color: $accent-black;
+        }
+    }
+}
