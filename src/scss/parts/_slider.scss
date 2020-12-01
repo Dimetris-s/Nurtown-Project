@@ -1,0 +1,103 @@
+.swiper {
+    &-pagination {
+        position: relative;
+        text-align: left;
+        margin-right: 25px;
+        &-fraction {
+            max-width: 100%;
+        }
+    } 
+    &-button-next,
+    &-button-prev {
+        position: static;
+        width: 53px;
+        height: 53px;
+        border: 2px solid #F2F2F2;
+        transform: translateY(12px);
+    
+        &::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &-button-next {
+        background-color: #F9F9F9;
+        &::after {
+            background-image: url(../img/icons/arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+    }
+    &-button-prev {
+        &::after {
+            background-image: url(../img/icons/arrow-l.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        margin-right: 26px;
+    }
+    &-pagination-current {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        color: $accent-black;
+        margin-right: 44px;
+        &::before {
+            content: '0';
+        }
+    }
+    &-pagination-total {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        color: #BDBDBD;
+        margin-left: 44px;
+        &::before {
+            content: '0';
+        }
+    }
+    &-pagination-slash {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 43px;
+            background-color: #E0E0E0;
+            height: 3px;
+            transform: translateY(12px) translateX(-20px) rotate(-45deg);        
+        }
+    }
+    &-slide {
+        margin-bottom: 60px;
+    }
+    &-container-projects {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+}    
+
+}
+
+.navbuttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-wrapper {
+    @include flexible(flex-start, row, center);
+
+}
+
+.swiper-container-initialized {
+    padding-bottom: 13px;
+}

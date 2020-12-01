@@ -1,0 +1,44 @@
+.project-page {
+
+    &__container {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 35% 30% 35%;
+        gap: 30px;
+    }
+
+    &__top-picture {
+        max-height: 435px;
+        overflow: hidden;
+        grid-column: span 2;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-position: 0px -170px;
+        }
+    }
+
+
+    &__image {
+        overflow: hidden;
+
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    &__bottom-picture {
+        max-height: 435px;
+        grid-column: span 2;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

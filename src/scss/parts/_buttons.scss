@@ -2,26 +2,53 @@
 button,
 a.button {
     cursor: pointer;
-    text-align: center;
     text-transform: uppercase;
     text-decoration: none;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.2em;
+    font-style: normal;
+    width: 220px;
+    height: 70px;
+    &:hover {
+        text-decoration: underline;
+    }
+    @include flexible(center, row, center);
+    
 }
 
 .button {
     &--white {
         background-color: #ffffff;
-        padding: 30px 52px;
-        padding-right: 88px;
         position: relative;
-        &::after {
-            content: '';
-            position: absolute;
+        color: $accent-black;
+        font-weight: normal;
+        span {
             background-image: url(../img/icons/arrow.svg);
             width: 24px;
             height: 24px;
             background-repeat: no-repeat;
             background-position: center;
-            top: 32%;
+            margin-left: 12px;
+        }
+    }
+
+    &--black {
+        background-color: $accent-black;
+        color: #fff;    
+        font-weight: 400;
+    }
+
+    &--black-arrow {
+        background-color: $accent-black;
+        color: #fff;    
+        font-weight: 400;
+        span {
+            background-image: url(../img/icons/arrow-r-white.svg);
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
             margin-left: 12px;
         }
     }
