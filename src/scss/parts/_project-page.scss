@@ -1,19 +1,20 @@
 .project-page {
 
     &__container {
-        display: grid;
-        grid-template-columns: 35% 65%;
-        grid-template-rows: 35% 30% 35%;
-        gap: 30px;
+        display: flex;
+        flex-direction: column;
     }
-
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
     &__top-picture {
         max-height: 435px;
         overflow: hidden;
-        grid-column: span 2;
+        margin-bottom: 30px;
 
         img {
-            height: 100%;
             width: 100%;
             object-position: 0px -170px;
         }
@@ -22,7 +23,11 @@
 
     &__image {
         overflow: hidden;
-
+        margin-right: 30px;
+        width: 35%;
+        img {
+            width: 100%;
+        }
     }
 
     &__text {
@@ -30,14 +35,13 @@
         font-weight: 300;
         font-size: 16px;
         line-height: 25px;
+        width: 65%;
     }
 
     &__bottom-picture {
-        max-height: 435px;
-        grid-column: span 2;
+        max-height: 435px; 
 
         img {
-            height: 100%;
             width: 100%;
         }
     }

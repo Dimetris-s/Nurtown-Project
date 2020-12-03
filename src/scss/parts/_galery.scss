@@ -1,0 +1,35 @@
+.galery {
+    &__item {
+        margin-bottom: 30px;
+        display: block;
+        position: relative;
+        &:hover  .galery__mask {
+            height: 45%;
+            opacity: 0.8;
+        }
+       
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__mask {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #FBFBFB;
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        height: 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: $accent-black;
+        padding: 20px;
+        opacity: 0;
+        transition: all .5s ease;
+        display: block; 
+    }
+}

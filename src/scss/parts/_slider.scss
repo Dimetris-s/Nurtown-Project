@@ -74,6 +74,7 @@
     }
     &-slide {
         margin-bottom: 60px;
+        
     }
     &-container-projects {
         margin-left: auto;
@@ -83,7 +84,23 @@
         list-style: none;
         padding: 0;
         z-index: 1;
-}    
+
+    } 
+    &-container-galery {
+        margin-left: auto;
+        margin-right: auto;
+        // position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        & .swiper-slide {
+            height: calc((100% - 30px) / 3);
+            position: relative;
+        }
+    }       
 
 }
 
@@ -99,5 +116,5 @@
 }
 
 .swiper-container-initialized {
-    padding-bottom: 13px;
+    padding-bottom: 100px;
 }

@@ -6,7 +6,14 @@
     @@include('components/_header.html', {
         'main': 'active'
     })
-
+    <section class="heading-section">
+        <div class="container heading-section__container">
+            @@include('components/_title.html', {
+                'firstword': 'Project',
+                'secondword': 'Nurtown'
+            })
+        </div>
+    </section>
 
     @@include('components/_footer.html', {
         'main': 'active'
