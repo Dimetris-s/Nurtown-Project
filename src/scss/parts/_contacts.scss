@@ -1,11 +1,54 @@
 .contacts {
-    &__list {
 
+    &__container {
+        @include flexible(space-between, row, flex-start);
+        height: 450px;
     }
-    &__item {
 
+    &__left {
+        @include flexible(space-between, column, flex-start);
+        height: 100%;
     }
+
+    &__subtitle {
+        color: $accent-black;
+    }
+
+    &__adress {
+        span {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
     &__link {
         text-decoration: none;
+        display: block;
+        color: $accent-black;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &--tel {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    &__main {
+       position: relative;
+ 
     }
 }
+
+.map {
+    margin-right: -50px;
+}
+

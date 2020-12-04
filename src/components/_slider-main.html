@@ -1,0 +1,30 @@
+<!-- Slider main container -->
+<div class="swiper-container-main">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+           @@include('_main-slide.html', {
+               'src': 'img/main.png' 
+           })
+        </div>
+        <div class="swiper-slide">
+            @@include('_main-slide.html', {
+                'src': 'img/cabinet.jpg' 
+            })
+        </div>
+    
+    
+    </div>
+    <!-- If we need pagination -->
+    <div class="nav-wrapper">
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="navbuttons">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+</div>

@@ -74,6 +74,21 @@ function image() {
             quality: 70
         }))
         .pipe(dest('dist/img'))
+        .pipe(src('src/img/**/*.png'))
+        .pipe(webp({
+            quality: 70
+        }))
+        .pipe(dest('dist/img'))
+        .pipe(src('src/img/**/*.png'))
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
+            interlaced: true,
+            optimizationLevel: 3
+        }))
+        .pipe(dest('dist/img'))
         .pipe(src('src/img/**/*.{jpg, png,svg, gif, ico, webp}'))
         .pipe(imagemin({
             progressive: true,

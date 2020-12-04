@@ -6,7 +6,25 @@
     @@include('components/_header.html', {
         'contacts': 'active'
     })
-    
+    <main class="main contacts__main">
+        <div class="container contacts__container">
+            <div class="contacts__left">
+                @@include('components/_title.html', {
+                    'firstword': 'Контактная',
+                    'secondword': 'Информация'
+                })
+                <p class="contacts__adress">
+                    <span>«Digital Project»</span>
+                    г. Караганда, ул. Телевизионная 10 </p>
+                <a class="contacts__link contacts__link--tel" href="tel:+7 (701) 77 76 811">+7 (701) 77 76 811</a>
+                <a class="contacts__link" href="mailto:Galym.sultanov@mail.ru">Galym.sultanov@mail.ru</a>
+                <button class="button button--black">Обратная связь</button>
+            </div>
+            <div class="map">
+                <img src="img/map.png" alt="map">
+            </div>
+        </div>
+    </main>
     @@include('components/_footer.html', {
         'contacts': 'active'
     })

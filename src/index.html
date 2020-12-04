@@ -1,23 +1,95 @@
 @@include('components/_head.html', {
-    'title': 'Project Nurtown',
-    'lang': 'ru'
+'title': 'Project Nurtown',
+'lang': 'ru'
 })
 
-    @@include('components/_header.html', {
-        'main': 'active'
-    })
-    <section class="heading-section">
-        <div class="container heading-section__container">
-            @@include('components/_title.html', {
-                'firstword': 'Project',
-                'secondword': 'Nurtown'
-            })
-        </div>
-    </section>
+@@include('components/_header.html', {
+'main': 'active'
+})
+<section class="top-section">
+    <div class="container top-section__container">
+        <div class="top-section__left">
+            <h2 class="title">
+                <span class="title__words">Nurtown</span>
+                <span class="title__words">Project</span>
+            </h2>
+            <div class="nav-wrapper">
+                <div class="swiper-pagination"></div>
 
-    @@include('components/_footer.html', {
-        'main': 'active'
-    })
+                <!-- If we need navigation buttons -->
+                <div class="navbuttons">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Slider main container -->
+        <div class="swiper-container-main">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    @@include('components/_main-slide.html', {
+                    'src': 'img/main.png'
+                    })
+                </div>
+                <div class="swiper-slide">
+                    @@include('components/_main-slide.html', {
+                    'src': 'img/cabinet.jpg'
+                    })
+                </div>
+
+
+            </div>
+
+            <!-- <div class="nav-wrapper">
+                <div class="swiper-pagination"></div>
+
+                <div class="navbuttons">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</section>
+<main class="main">
+    <div class="container main__container">
+        <section class="about">
+            @@include('components/_card.html', {
+            'class': 'card--extended',
+            'title': 'О компании',
+            'src': 'img/cardimg1.png',
+            'src-second': 'img/cardimg2.png',
+            'src-third': 'img/cardimg3.png',
+            'btntxt': 'Читать'
+            })
+            <div class="objectives">
+                <h3 class="objectives__heading">Основные задачи</h3>
+                <ol class="objectives__list">
+                    <li class="objectives__item">Создание комфортных условий и повышение качества обслуживания клиентов
+                    </li>
+                    <li class="objectives__item">Постоянно совершенствовать качество предоставляемых услуг путем
+                        обучения персонала, закупки нового оборудования и усиленной рекламы на рынке
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section class="projects">
+            <h3 class="projects__heading">Наши проекты</h3>
+            <div class="projects__galery">
+
+            </div>
+            <button class="button button--black-arrow">Все проекты</button>
+        </section>
+    </div>
+</main>
+
+
+@@include('components/_footer.html', {
+'main': 'active'
+})
 
 
 @@include('components/_foot.html')

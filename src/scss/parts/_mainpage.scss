@@ -1,0 +1,99 @@
+.main-slide {
+    position: relative;
+    max-height: 770px;
+    overflow: hidden;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .button--white {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.card--extended {
+    margin-bottom: 150px;
+}
+
+.top-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.top-section__container {
+    height: 100%;
+    @include flexible(space-between, row, center);
+
+    .nav-wrapper {
+        @include flexible(space-between, column, flex-start);
+
+        .swiper-pagination {
+            margin-bottom: 90px;
+        }
+
+    }
+
+    .title {
+        margin-right: 70px;
+        margin-bottom: 90px;
+    }
+}
+
+.top-section__left {
+    @include flexible(space-between, column, flex-start);
+    height: 100%;
+}
+
+.about {
+    margin-bottom: 120px;
+}
+
+.objectives {
+    &__heading {
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 64px;
+        color: #BDBDBD;
+        margin-bottom: 60px;
+    }
+
+    &__list {
+        list-style: none;
+        counter-reset: objectives;
+        @include flexible(space-between,row, center)
+    }
+
+    &__item {
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 36px;
+        color: $accent-black;
+        position: relative;
+        padding-left: 135px;
+
+        &::before {
+            counter-increment: objectives;
+            content: counter(objectives);
+            font-weight: 900;
+            font-size: 200px;
+            color: #F2F2F2;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    }
+}
+
+.projects {
+
+    &__heading {}
+
+    &__galery {}
+}
+
+.button {}

@@ -37,6 +37,9 @@ a.button {
         background-color: $accent-black;
         color: #fff;    
         font-weight: 400;
+        &-weird {
+            width: 100%;
+        }
     }
 
     &--black-arrow {

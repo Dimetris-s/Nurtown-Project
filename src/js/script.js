@@ -7,3 +7,5 @@ navigationLinks.forEach(el => {
         }
     })
 })
+//! API google maps
+// AIzaSyDq8klL_fGkWXtW5Gu8QdAcpVBxUuI7EBk

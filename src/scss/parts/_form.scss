@@ -1,0 +1,46 @@
+.form {
+
+    &__body {}
+
+    &__item {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__label {
+    }
+
+    &__input {
+        padding: 15px 20px;
+        background-color: #F3F3F3;
+
+        &::placeholder {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.04em;
+            color: #8D8D8D;
+        }
+    }
+
+    &__button {}
+}
+
+.select {}
+
+.checkbox {
+
+    &__input {}
+
+    &__label {
+        span {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.03em;
+            color: $accent-black;
+        }
+    }
+}

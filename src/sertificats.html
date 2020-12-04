@@ -7,7 +7,19 @@
         'sertifications': 'active'
     })
     
-
+    <section class="heading-section">
+        <div class="container heading-section__container">
+            @@include('components/_title.html', {
+                'firstword': 'Сертификаты',
+                'secondword': 'Компании'
+            })
+        </div>
+    </section>
+    <main class="main sertific__main">
+        <div class="container sertific__container">
+            @@include('components/_slider-sertific.html')
+        </div>
+    </main>
     @@include('components/_footer.html', {
         'sertifications': 'active'
     })
