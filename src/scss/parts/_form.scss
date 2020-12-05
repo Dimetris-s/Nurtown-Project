@@ -4,17 +4,23 @@
 
     &__item {
         margin-bottom: 10px;
+
         &:last-child {
             margin-bottom: 25px;
         }
     }
 
-    &__label {
-    }
-
     &__input {
         padding: 15px 20px;
         background-color: #F3F3F3;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.04em;
+        color: #8D8D8D;
+        max-width: 390px;
+        width: 100%;
+
 
         &::placeholder {
             font-weight: normal;
@@ -28,19 +34,69 @@
     &__button {}
 }
 
-.select {}
+.select {
+    padding: 15px 20px;
+    background-color: #F3F3F3;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+    color: #8D8D8D;
+    max-width: 390px;
+    width: 100%;
+}
 
 .checkbox {
-
-    &__input {}
+    margin-bottom: 21px;
+    display: flex;
+    &__input {
+        display: none;
+        &:checked + .checkbox__label::after {
+            display: block;
+        }
+    }
 
     &__label {
+        display: inline-flex;
+        align-items: center;
+        line-height: 140%;
+        position: relative;
+        cursor: pointer;
         span {
             font-weight: normal;
             font-size: 14px;
             line-height: 17px;
             letter-spacing: 0.03em;
             color: $accent-black;
+            display: inline-block;
+            margin-left: 12px;
+        }
+        &::before {
+            content: '';
+            flex: 0 0 24px;
+            height: 24px;
+            background-color: #F3F3F3;
+            border-radius: 4px;
+            align-self: flex-start;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url(../img/icons/check.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 13px;
+            height: 9px;
+            top: 8px;
+            left: 6px;
+            display: none;
         }
     }
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+    overflow: auto;
+    margin-bottom: 22px;
 }

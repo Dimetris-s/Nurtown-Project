@@ -1,5 +1,5 @@
 <div class="form">
-    <form action="#" id="form" class="form__body"> 
+    <form action="#" method="GET" id="form" class="form__body"> 
         <div class="form__item">
             <label class="form__label">
                 <input id="formName" type="text" name="name" class="form__input" placeholder="Имя">
@@ -28,7 +28,7 @@
 
         <div class="form__item">
             <label for="formMessage" class="form__label">
-                <textarea name="message" id="formMessage" class="form__input" required placeholder="Сообщение"></textarea>
+                <textarea name="message" id="formMessage" class="form__input" required placeholder="Сообщение*"></textarea>
             </label>
         </div>
 
@@ -43,6 +43,6 @@
                 </label>
             </div>
         </div>
-        <button type="submit" class="button @@btnclass form__button">Отправить</button>
+        <button type="submit" class="button @@btnclass form__button">Отправить <span></span></button>
     </form>
 </div>

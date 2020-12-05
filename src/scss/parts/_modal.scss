@@ -1,6 +1,88 @@
-.modal-form {
+.modal {
     position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #333333ab;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.modal-ok {
+    position: absolute;
+    @include flexible(space-between, column, flex-start);
+    padding: 27px 40px;
+    height: 420px;
+    width: 460px;
+    background-color: #fff;
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    position: relative;
+    &.hidden {
+        display: none;
+    }
+
+    .modal__close {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/icons/cross.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 26px;
+        letter-spacing: 0.03em;
+        color: #333333;
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+
+}
+
+.modal-form {
+    position: absolute;
+    padding: 27px 40px;
+    width: 470px;
+    background-color: #fff;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // border: 1px solid black;
+    position: relative;
+
+    .modal__close {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/icons/cross.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 35px;
+        right: 45px;
+        cursor: pointer;
+    }
+
+    .checkbox__label {
+        text-align: left;
+    }
+}
+
+.modal-title {
+    margin-bottom: 25px;
 }

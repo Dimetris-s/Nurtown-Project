@@ -2,7 +2,7 @@
 'title': 'Project Nurtown',
 'lang': 'ru'
 })
-
+@@include('components/_modal.html')
 @@include('components/_header.html', {
 'main': 'active'
 })
@@ -121,7 +121,9 @@
             <div class="container contact-us__container">
                 <h3 class="contact-us__heading">Связаться с нами</h3>
                 <div class="form-wrapper">
-                    @@include('components/_form.html')
+                    @@include('components/_form.html', {
+                        'btnclass': 'button--black-arrow'
+                    })
                     <div class="form__image">
                         <img src="img/formimg.png" alt="">
                     </div>

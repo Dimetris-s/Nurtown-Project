@@ -8,6 +8,8 @@
     &__left {
         @include flexible(space-between, column, flex-start);
         height: 100%;
+        margin-right: 35px;
+        width: 50%;
     }
 
     &__subtitle {
@@ -49,6 +51,11 @@
 }
 
 .map {
-    margin-right: -50px;
+    margin-right: calc(50% - 50vw);
+    width: 100%;
+    height: 500px;
+    &-frame {
+        width: 100%;
+        height: 100%;
+    }
 }
-

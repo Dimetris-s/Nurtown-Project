@@ -211,9 +211,13 @@
 
 .contact-us {
 
-    &__container {
+    .form__image {
+        max-height: 370px;
+        height: 100%;
+        img {
+            height: 100%;
+        }
     }
-
     &__heading {
         font-weight: 300;
         font-size: 64px;

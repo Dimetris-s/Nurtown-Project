@@ -1,32 +1,35 @@
 @@include('components/_head.html', {
-    'title': 'Project Nurtown',
-    'lang': 'ru'
+'title': 'Project Nurtown',
+'lang': 'ru'
 })
-
-    @@include('components/_header.html', {
-        'contacts': 'active'
-    })
-    <main class="main contacts__main">
-        <div class="container contacts__container">
-            <div class="contacts__left">
-                @@include('components/_title.html', {
-                    'firstword': 'Контактная',
-                    'secondword': 'Информация'
-                })
-                <p class="contacts__adress">
-                    <span>«Digital Project»</span>
-                    г. Караганда, ул. Телевизионная 10 </p>
-                <a class="contacts__link contacts__link--tel" href="tel:+7 (701) 77 76 811">+7 (701) 77 76 811</a>
-                <a class="contacts__link" href="mailto:Galym.sultanov@mail.ru">Galym.sultanov@mail.ru</a>
-                <button class="button button--black">Обратная связь</button>
-            </div>
-            <div class="map">
-                <img src="img/map.png" alt="map">
-            </div>
+@@include('components/_modal.html')
+@@include('components/_header.html', {
+'contacts': 'active'
+})
+<main class="main contacts__main">
+    <div class="container contacts__container">
+        <div class="contacts__left">
+            @@include('components/_title.html', {
+            'firstword': 'Контактная',
+            'secondword': 'Информация'
+            })
+            <p class="contacts__adress">
+                <span>«Digital Project»</span>
+                г. Караганда, ул. Телевизионная 10 </p>
+            <a class="contacts__link contacts__link--tel" href="tel:+7 (701) 77 76 811">+7 (701) 77 76 811</a>
+            <a class="contacts__link" href="mailto:Galym.sultanov@mail.ru">Galym.sultanov@mail.ru</a>
+            <button class="button js-contact button--black">Обратная связь</button>
         </div>
-    </main>
-    @@include('components/_footer.html', {
-        'contacts': 'active'
-    })
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d526.4232444252596!2d71.48308197790982!3d51.1249699191114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424583e8de31315d%3A0xe0cdf5dc3f0cbf37!2z0LbQsNC9LdC00LDRg9CwINC80LXQtNC10YLRhtC40L3QsNC70YvSmyDQvtGA0YLQsNC70YvSmw!5e0!3m2!1sru!2sua!4v1607190398302!5m2!1sru!2sua"
+                allowfullscreen="false" aria-hidden="false" class="map-frame"
+                tabindex="0"></iframe>
+        </div>
+    </div>
+</main>
+@@include('components/_footer.html', {
+'contacts': 'active'
+})
 
 @@include('components/_foot.html')
