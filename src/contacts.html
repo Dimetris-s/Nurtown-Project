@@ -2,7 +2,10 @@
 'title': 'Project Nurtown',
 'lang': 'ru'
 })
-@@include('components/_modal.html')
+<div class="modal hidden">
+    @@include('components/_modal-form.html')
+    @@include('components/_modal-ok.html')
+</div>
 @@include('components/_header.html', {
 'contacts': 'active'
 })

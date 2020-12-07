@@ -1,18 +1,18 @@
 <div class="form">
-    <form action="#" method="GET" id="form" class="form__body"> 
+    <form action="#" method="POST" id="form" class="form__body"> 
         <div class="form__item">
             <label class="form__label">
-                <input id="formName" type="text" name="name" class="form__input" placeholder="Имя">
+                <input id="formName" data-validate-field="name" type="text" name="name" class="form__input" placeholder="Имя*">
             </label>
         </div>
         <div class="form__item">
             <label class="form__label">
-                <input id="formTel" type="tel" name="tel" class="form__input" required placeholder="Номер телефона*">
+                <input id="formTel" type="tel" name="tel" data-validate-field="phone" class="form__input" required placeholder="Номер телефона*">
             </label>
         </div>
         <div class="form__item">
             <label class="form__label">
-                <input id="formEmail" type="email" name="email" class="form__input" required placeholder="E-mail*">
+                <input id="formEmail" type="email" name="email" data-validate-field="email" class="form__input" required placeholder="E-mail*">
             </label>
         </div>
         <div class="form__item">
@@ -28,13 +28,13 @@
 
         <div class="form__item">
             <label for="formMessage" class="form__label">
-                <textarea name="message" id="formMessage" class="form__input" required placeholder="Сообщение*"></textarea>
+                <textarea name="message" data-validate-field="text" id="formMessage" class="form__input" required placeholder="Сообщение*"></textarea>
             </label>
         </div>
 
         <div class="form__item">
             <div class="checkbox">
-                <input type="checkbox" checked name="agreement" id="formAgreement" class="checkbox__input" required checked >
+                <input type="checkbox" data-validate-field="checkbox" checked name="agreement" id="formAgreement" class="checkbox__input" required >
                 <label for="formAgreement" class="checkbox__label">
                     <span>Отправляя заявку Вы соглашаетесь
                         с политикой
@@ -43,6 +43,6 @@
                 </label>
             </div>
         </div>
-        <button type="submit" class="button @@btnclass form__button">Отправить <span></span></button>
+        <button type="submit" class="button @@btnclass form__button">Отправить<span></span></button>
     </form>
 </div>
