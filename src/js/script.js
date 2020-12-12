@@ -116,6 +116,12 @@ if (myForm) {
       form.reset()
     }
   });
+}
 
+const burgerBtn = document.querySelector('.header__burger')
+const burgerMenu = document.querySelector('.burger-menu')
 
+burgerBtn.onclick = () => {
+  burgerBtn.classList.toggle('active')
+  burgerMenu.classList.toggle('active')
 }

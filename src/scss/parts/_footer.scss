@@ -2,6 +2,7 @@
     color: #fff;
     background-color: #2C2C2C;
     margin-top: 120px;
+    
 
     &__container {
         padding-top: 60px;
@@ -9,16 +10,26 @@
         display: grid;
         grid-template-columns: 145px 145px 285px 200px;
         justify-content: space-between;
-        min-height: 230px;
+        @media(max-width: 815px) {
+            display: flex;
+            flex-direction: column;
+            padding-left: 30px;
+        }
     }
 
     &__logo {
         max-width: 145px;
         max-height: 95px;
+        @media(max-width: 815px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__info {
         @include flexible(space-between, column, flex-start);
+        @media(max-width: 815px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__title {
@@ -27,6 +38,10 @@
         font-weight: bold;
         font-size: 16px;
         line-height: 20px;
+        @media(max-width: 815px) {
+            font-size: 36px;
+            line-height: 36px;
+        }
     }
 
     &__menu {
@@ -79,16 +94,29 @@
 
     &__contacts {
         @include flexible(space-between, column, flex-start);
+        @media(max-width: 815px) {
+            margin-bottom: 30px;
+        }
 
         .contacts__list {
             @include flexible(space-between, column, flex-start);
             min-height: 175px;
             list-style-type: none;
             position: relative;
+            @media(max-width: 815px) {
+                justify-content: start;
+                min-height: auto;
+            }
         }
 
         .contacts__item {
             padding-left: 25px;
+            @media(max-width: 815px) {
+                margin-bottom: 25px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         .contacts__link {
@@ -141,6 +169,9 @@
 
     &__socials-wrapper {
         @include flexible(space-between, row, center);
+        @media(max-width: 815px) {
+            justify-content: space-around;
+        }
     }
 
     &__socials-link {

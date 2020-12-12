@@ -2,14 +2,26 @@
     @include flexible(center, column, flex-start);
 
     &__words {
+        @media (max-width: 992px) {
+            font-size: 48px;
+            line-height: 48px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 36px;
+            line-height: 36px;
+        }
+
         text-transform: uppercase;
         font-size: 64px;
         line-height: 64px;
         display: inline-block;
+
         &:first-child {
             font-weight: 300;
             color: #BDBDBD;
         }
+
         &:last-child {
             font-weight: bold;
             color: $accent-black;

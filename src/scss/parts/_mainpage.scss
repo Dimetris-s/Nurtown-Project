@@ -22,19 +22,38 @@
 .top-section {
     margin-bottom: 30px;
     padding-bottom: 30px;
+
+    @media (max-width: 425px) {
+        margin-bottom: 30px;
+        padding-bottom: 0;
+    }
 }
 
 .top-section__container {
     height: 100%;
     @include flexible(space-between, row, center);
 
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+    }
+
     .nav-wrapper {
         @include flexible(space-between, column, flex-start);
 
         .swiper-pagination {
             margin-bottom: 90px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 40px;
+            }
+
         }
 
+        .navbuttons {
+            @media (max-width: 425px) {
+                margin-bottom: 40px;
+            }
+        }
     }
 
     .title {
@@ -46,6 +65,16 @@
 .top-section__left {
     @include flexible(space-between, column, flex-start);
     height: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    @media (max-width: 425px) {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
 }
 
 .about {
@@ -54,6 +83,16 @@
 
 .objectives {
     &__heading {
+        @media (max-width: 992px) {
+            font-size: 48px;
+            line-height: 48px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 36px;
+            line-height: 36px;
+        }
+
         font-weight: 300;
         font-size: 64px;
         line-height: 64px;
@@ -63,7 +102,12 @@
 
     &__list {
         list-style: none;
-        @include flexible(space-between, row, center)
+        @include flexible(space-between, row, center);
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
     }
 
     &__item {
@@ -75,16 +119,48 @@
         @include flexible(flex-start, row, center);
         max-width: 570px;
 
+        @media (max-width: 480px) {
+            font-size: 18px;
+            line-height: 24px;
+
+        }
+
+        @media (max-width: 992px) {
+            margin-bottom: 100px;
+            max-width: 100%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+
         &:first-child {
             max-width: 415px;
+
+            @media (max-width: 992px) {
+                max-width: 100%;
+            }
         }
 
         span {
-            display: block;
+            display: inline-block;
             font-weight: 900;
             font-size: 200px;
             color: #F2F2F2;
             margin-right: 30px;
+
+            @media (max-width: 768px) {
+                font-size: 150px;
+                align-self: start;
+
+            }
+
+            @media (max-width: 480px) {
+                font-size: 100px;
+                align-self: start;
+                margin-right: 10px;
+            }
         }
     }
 }
@@ -94,6 +170,16 @@
     margin-bottom: 120px;
 
     &__heading {
+        @media (max-width: 992px) {
+            font-size: 48px;
+            line-height: 48px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 36px;
+            line-height: 36px;
+        }
+
         font-weight: 300;
         font-size: 64px;
         line-height: 64px;
@@ -108,6 +194,11 @@
         gap: 30px;
         margin-bottom: 30px;
 
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+
         &-link {
             font-weight: normal;
             font-size: 12px;
@@ -120,9 +211,12 @@
             position: relative;
             margin-right: 12px;
             transition: all 0.3s ease;
+            align-self: start;
+
             &:hover {
                 text-decoration: underline;
             }
+
             &::after {
                 content: '';
                 position: absolute;
@@ -139,6 +233,10 @@
         }
 
         &-item {
+            @media (max-width: 768px) {
+                margin-bottom: 30px;
+                overflow: hidden;
+            }
             &:nth-child(1) {
                 grid-column: span 6;
             }
@@ -149,10 +247,12 @@
 
             &:nth-child(3) {
                 grid-column: span 3;
+
                 .projects__galery-mask {
                     font-size: 32px;
                     line-height: 32px;
-                    padding: 50px 60px;
+                    padding-left: 10px;
+                    font-size: 25px;
                 }
             }
 
@@ -162,6 +262,7 @@
 
             &:nth-child(5) {
                 grid-column: span 4;
+
                 .projects__galery-mask {
                     font-size: 36px;
                     line-height: 36px;
@@ -174,12 +275,15 @@
 
             max-height: 255px;
             position: relative;
-            &:hover .projects__galery-mask{
+
+            &:hover .projects__galery-mask {
                 background-color: rgba(51, 51, 51, 0.308);
                 color: #FFFFFF;
             }
+
             &:hover .projects__galery-link {
                 color: #fff;
+
                 &::after {
                     opacity: 1;
                 }
@@ -188,7 +292,7 @@
 
         &-mask {
             @include flexible(center, column, flex-start);
-            padding: 50px 80px;
+            padding-left: 20px;
             position: absolute;
             width: 100%;
             background-color: rgba(51, 51, 51, 0);
@@ -201,11 +305,20 @@
             top: 0;
             left: 0;
             transition: all .3s ease;
+
+            @media (max-width: 992px) {
+                font-size: 38px;
+                line-height: 42px;
+            }
+
         }
     }
 
     .button {
         align-self: flex-end;
+        @media(max-width: 768px) {
+            align-self: flex-start;
+        }
     }
 }
 
@@ -214,18 +327,40 @@
     .form__image {
         max-height: 370px;
         height: 100%;
+
+        @media(max-width: 992px) {
+            display: none;
+        }
+
         img {
             height: 100%;
         }
     }
+
     &__heading {
+        @media (max-width: 992px) {
+            font-size: 48px;
+            line-height: 48px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 36px;
+            line-height: 36px;
+        }
+
         font-weight: 300;
         font-size: 64px;
         line-height: 64px;
         color: #BDBDBD;
         margin-bottom: 60px;
     }
+
     .form-wrapper {
-        @include flexible(space-between,row, start);
+        @include flexible(space-between, row, start);
+
+        @media(max-width: 480px) {
+            align-items: center;
+            justify-content: center;
+        }
     }
 }

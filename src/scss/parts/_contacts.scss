@@ -2,13 +2,22 @@
 
     &__container {
         @include flexible(space-between, row, flex-start);
-        height: 450px;
+        
+
+        @media(max-width: 992px) {
+            flex-direction: column;
+        }
     }
 
     &__left {
         @include flexible(space-between, column, flex-start);
+        min-height: 450px;
         height: 100%;
         margin-right: 35px;
+        @media(max-width: 992px) {
+            margin-bottom: 30px;
+            min-height: 350px;
+        }
     }
 
     &__subtitle {

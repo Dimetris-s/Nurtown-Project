@@ -31,10 +31,20 @@ let projectsSwiper = new Swiper('.swiper-container-projects', {
     direction: 'horizontal',
     loop: true,
     allowTouchMove: true,
-    slidesPerView: 5,
-    spaceBetween: 30,
+    slidesPerView: 3,
+    spaceBetween: 10,
     autoheight: false,
     slidesPerGroup: 1,
+    breakpoints: {
+      992: {
+        slidesPerView: 5,
+        spaceBetween: 30
+
+      },
+      768: {
+        spaceBetween: 20
+      }
+    },
   
 
   
@@ -64,10 +74,20 @@ let projectsSwiper = new Swiper('.swiper-container-projects', {
     direction: 'horizontal',
     loop: true,
     allowTouchMove: true,
-    slidesPerView: 3,
-    spaceBetween: 30,
+    slidesPerView: 1,
+    spaceBetween: 20,
     autoheight: false,
     slidesPerGroup: 1,
+    breakpoints: {
+      768: {
+        spaceBetween: 30,
+        slidesPerView: 3
+      },
+      540: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      }
+    },
   
 
   
@@ -100,7 +120,7 @@ let projectsSwiper = new Swiper('.swiper-container-projects', {
     allowTouchMove: false,
     slidesPerView: 1,
     spaceBetween: 30,
-    autoheight: true,
+    autoheight: false,
     slidesPerGroup: 1,
     speed: 800,
     effect: 'fade',

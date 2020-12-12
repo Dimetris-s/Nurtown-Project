@@ -1,6 +1,12 @@
 .form {
 
-
+    max-width: 390px ;
+    margin-right: 30px;
+    @media(max-width: 480px) {
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
     &__item {
         margin-bottom: 10px;
 
@@ -47,6 +53,10 @@
 .checkbox {
     margin-bottom: 21px;
     display: flex;
+    flex-wrap: wrap;
+    .js-validate-error-label {
+        margin-left: 35px;
+    }
     &__input {
         display: none;
         &:checked + .checkbox__label::after {
@@ -98,3 +108,4 @@ textarea {
     overflow: auto;
     margin-bottom: 22px;
 }
+
